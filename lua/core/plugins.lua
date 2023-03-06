@@ -31,6 +31,21 @@ return require('packer').startup(function(use)
   use { "lukas-reineke/indent-blankline.nvim" }
   use { "akinsho/bufferline.nvim" }
 
+
+  -- -- cmp plugins
+  -- use { "hrsh7th/nvim-cmp" } -- The completion plugin
+  -- use { "hrsh7th/cmp-buffer" } -- buffer completions
+  -- use { "hrsh7th/cmp-path" } -- path completions
+  -- use { "hrsh7th/cmp-nvim-lsp" }
+
+  -- -- LSP
+  -- -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
+  -- use { "neovim/nvim-lspconfig" } -- enable LSP
+  -- use { "williamboman/mason.nvim" }
+  -- use { "williamboman/mason-lspconfig.nvim" }
+  -- use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
+  -- use { "RRethy/vim-illuminate" }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

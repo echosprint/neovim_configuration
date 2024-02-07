@@ -5,6 +5,9 @@ vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 vim.keymap.set("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", opts)
 
+vim.keymap.set("n", "<leader>c", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
+vim.keymap.set("x", "<leader>c", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", opts)
+
 -- Telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", {})
 vim.keymap.set("n", "<leader>ft", ":Telescope live_grep<CR>", {})
@@ -19,4 +22,4 @@ vim.keymap.set("n", "<S-h>", ":bprevious<CR>", {})
 vim.keymap.set("n", "<leader>q", ":q!<CR>", {})
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>s', ':w<CR>')
-vim.keymap.set('n', '<leader>c', ':wq<CR>')
+-- vim.keymap.set('n', '<leader>c', ':wq<CR>')

@@ -1,4 +1,12 @@
-require('telescope').setup()
+require('telescope').setup({
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-h>"] = "which_key"
+      }
+    }
+  }
+})
 local builtin = require('telescope.builtin')
 
 

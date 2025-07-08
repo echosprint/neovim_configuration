@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
   use {
 	  'nvim-telescope/telescope.nvim',
-	  tag = '0.1.0',
+	  tag = '0.1.8',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
       config = function() require("Comment").setup {} end}
   use { "lukas-reineke/indent-blankline.nvim" }
   use { "akinsho/bufferline.nvim" }
+  use { "lewis6991/gitsigns.nvim" }
 
 
   -- -- cmp plugins

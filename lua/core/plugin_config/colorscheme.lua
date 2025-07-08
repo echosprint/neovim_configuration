@@ -1,8 +1,15 @@
--- setup must be called before loading the colorscheme
--- Default options:
+-- Configure Gruvbox theme
+local status, gruvbox = pcall(require, "gruvbox")
+if not status then
+  print("Gruvbox not found")
+  return
+end
 
-require("gruvbox").setup({
-  terminal_colors = true, -- add neovim terminal colors
+-- Set background before loading colorscheme
+vim.o.background = "dark"
+
+gruvbox.setup({
+  terminal_colors = true,
   undercurl = true,
   underline = true,
   bold = true,
@@ -17,15 +24,13 @@ require("gruvbox").setup({
   invert_selection = false,
   invert_signs = false,
   invert_tabline = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "", -- can be "hard", "soft" or empty string
+  inverse = true,
+  contrast = "",
   palette_overrides = {},
   overrides = {},
   dim_inactive = false,
   transparent_mode = false,
 })
-vim.cmd("colorscheme gruvbox")
 
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
--- vim.cmd("colorscheme darkplus")
+-- Load colorscheme
+vim.cmd("colorscheme gruvbox")
